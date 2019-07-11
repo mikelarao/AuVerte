@@ -1,0 +1,50 @@
+.inner-page-header {
+  position: relative;
+  min-height: 200px;
+  z-index: -1;
+  @include respond-to("medium") {
+    min-height: 330px;
+  }
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.22);
+  }
+
+  &-contents {
+    position: relative;
+    text-align: center;
+
+    h1 {
+      font: $font1;
+      letter-spacing: -1.44px;
+      color: $white;
+      font-size: 25px;
+      line-height: 1.5;
+      @include respond-to("medium") {
+        font-size: 36px;
+      }
+      & + hr {
+        width: 65px;
+        border-width: 0px;
+        border-bottom: 2px solid $gold;
+        margin-bottom: 19px;
+      }
+    }
+    h3 {
+      font: $font3;
+      font-size: 14px;
+      line-height: 1.5;
+      @include respond-to("medium") {
+        font-size: 16px;
+      }
+      color: $white;
+      margin-bottom: 0px;
+    }
+  }
+}

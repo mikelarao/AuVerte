@@ -1,0 +1,72 @@
+.contact {
+  &-section {
+    h1 {
+      font: $font1;
+      letter-spacing: -1.44px;
+      color: $black;
+      font-size: 25px;
+      margin-bottom: 5px;
+      line-height: 1.5;
+      @include respond-to("medium") {
+        font-size: 36px;
+      }
+    }
+    &-social-links {
+      list-style: none;
+      padding-left: 0px;
+      li {
+        float: left;
+        padding: 0 6px;
+        a {
+          color: $green3;
+          font-size: 24px;
+        }
+        &:first-child {
+          padding-left: 0px;
+        }
+        &:last-child {
+          padding-right: 0px;
+        }
+      }
+    }
+    h3 {
+      font: $font3;
+      font-size: 19px;
+      @include respond-to("small") {
+        font-size: 24px;
+      }
+      color: $black3;
+      line-height: 1.167;
+      margin-bottom: 10px;
+    }
+    h4 {
+      margin-bottom: 0px;
+      font: $font3;
+      font-size: 14px;
+      line-height: 1.357;
+      color: $gray5;
+      a {
+        color: $gray5;
+        text-decoration: none;
+      }
+    }
+    &-list {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      &-single-contact {
+        margin: 30px 0px;
+        .domain {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  hr.contact-separator {
+    width: 100%;
+    border-width: 0px;
+    border-bottom: 1px solid $gray7;
+    margin: 0px;
+    float: left;
+  }
+}

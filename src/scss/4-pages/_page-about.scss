@@ -1,0 +1,19 @@
+.about {
+  .solutions-section-list-single {
+    margin-bottom: 30px;
+    @include respond-to("small") {
+      margin-bottom: 40px;
+    }
+  }
+
+  .solutions-section-list-single-details-caption {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .solutions-section-list-single-details-image {
+    img {
+      width: 100%;
+    }
+  }
+}

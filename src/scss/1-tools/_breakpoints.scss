@@ -1,0 +1,42 @@
+// Fonts
+// $pfont: Arial
+$pfont: "Roboto", sans-serif;
+$sfont: "Raleway", sans-serif;
+
+// Cclors
+$white: #fff;
+$black: #0a0a0a;
+
+/* Menu Header */
+$breakpoints: (
+  "small": (
+    min-width: 576px
+  ),
+  "to-medium": (
+    max-width: 767px
+  ),
+  "medium": (
+    min-width: 768px
+  ),
+  "large": (
+    min-width: 992px
+  ),
+  "xlarge": (
+    min-width: 1200px
+  )
+) !default;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@include respond-to("to-medium") {
+  // sample
+}
