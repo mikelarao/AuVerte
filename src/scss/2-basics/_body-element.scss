@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font: $font3;
   font-size: 12px;
@@ -48,9 +54,18 @@ section {
   padding-top: 66px;
   @include respond-to("medium") {
     padding-top: 76px;
+    min-height: 100%;
+    margin-bottom: -116px;
+    .push {
+      height: 116px;
+    }
   }
   @include respond-to("large") {
     padding-top: 96px;
+    margin-bottom: -102px;
+    .push {
+      height: 102px;
+    }
   }
 }
 
